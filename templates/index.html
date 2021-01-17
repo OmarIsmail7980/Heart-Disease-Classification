@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heart Disease</title>
+       
+    </head>
+
+<style>
+    body{
+        font: arial;
+        background: linear-gradient(to left, #8942a8, #ba382f);
+        width: 100%;
+        height: 100vh;
+    }
+ 
+</style>    
+
+<body >
+        <center>
+        <div>
+            
+            <h1> Heart Disease Prediction</h1><br>
+            
+            {{ prediction_text }} <br>
+            
+            <form method = "post", action = "{{url_for('predict')}}">
+                <h3>Age</h3>
+                <input type="text" name="age" placeholder="" required="required"/>
+                <h3>Sex</h3>
+                <select type="text" name="sex" id="sex" required="required">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option></select>
+                <h3>Chest_pain</h3>
+                <select type="text" name="chest_pain" id="chest_pain" required="required">
+                    <option value="1">typical</option>
+                    <option value="2">atypical</option>
+                    <option value="3">non-anginal</option>
+                    <option value="4">asymptomatic</option></select>
+                <h3>Resting blood pressure</h3>
+                <input type="text" name="resting_bp" placeholder="" required="required" />  
+                <h3>Cholestoral</h3>              
+                <input type="text" name="cholestoral" placeholder="in mg/dl" required="required" /><br>
+                <h3>High Sugar</h3>
+                <select type="text" name="high_sugar" id="high_sugar" required="required">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option></select>
+                <h3>Resting electrocardiographic results</h3>
+                <select type="text" name="ecg" id="ecg" required="required">
+                    <option value="0">typical</option>
+                    <option value="1">ST-T wave abnormality</option>
+                    <option value="2">left ventricular hypertrophy</option></select>
+                <h3>Max Heart Rate</h3>
+                <input type="text" name="max_rate" placeholder="" required="required" /><br>
+                <h3>Excercise Angina</h3>
+                <select type="text" name="exercise_angina" id="exercise_angina" required="required">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option></select>
+                <h3> ST depression</h3>
+                <input type="text" name="st_depression" placeholder="" required="required" /><br>
+                <h3>Peak Excercise Slope</h3>           
+                    <select type="text" name="slope" id="slope" required="required">
+                    <option value="1">Unsloping</option>
+                    <option value="2">Flat</option>
+                    <option value="3">Downsloping</option></select>
+                <h3>Major Vessels</h3>    
+                <select type="text" name="vessels" id="vessels" required="required">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option></select>   
+                <h3>Thalium Scan</h3>
+                 <select type="text" name="thalium_scan" id="thalium_scan" required="required">
+                    <option value="3">Normal</option>
+                    <option value="6">Fixed defect</option>
+                    <option value="7">reversable defect</option></select><br><br>
+                   
+                <br><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            
+        <br><br>
+        
+         <br><br><br><hr>
+         
+        </center>
+
+
+        </div>
+</body>
+</html>
+
+<style>
+
